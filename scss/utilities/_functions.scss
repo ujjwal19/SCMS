@@ -1,0 +1,41 @@
+/* General margin utility from 0px to 48px
+   ========================================================================== */
+
+@for $i from 0 through 48 {
+  .mg-#{$i} {
+    margin: 0px + $i !important;
+  }
+  .mg-t-#{$i} {
+    margin-top: 0px + $i !important;
+  }
+  .mg-b-#{$i} {
+    margin-bottom: 0px + $i !important;
+  }
+  .mg-l-#{$i} {
+    margin-left: 0px + $i !important;
+  }
+  .mg-r-#{$i} {
+    margin-right: 0px + $i !important;
+  }
+}
+
+/* General padding utility from 0px to 48px
+   ========================================================================== */
+
+@for $i from 0 through 48 {
+  .pd-#{$i} {
+    padding: 0px + $i !important;
+  }
+  .pd-t-#{$i} {
+    padding-top: 0px + $i !important;
+  }
+  .pd-b-#{$i} {
+    padding-bottom: 0px + $i !important;
+  }
+  .pd-l-#{$i} {
+    padding-left: 0px + $i !important;
+  }
+  .pd-r-#{$i} {
+    padding-right: 0px + $i !important;
+  }
+}

@@ -1,0 +1,44 @@
+
+@import 'base/fonts'; // Fonts
+@import 'utilities/variables'; // Variables 
+/* Vendors
+   ========================================================================== */
+@import 'vendors/bootstrap/bootstrap'; // Bootstrap
+@import 'vendors/animate/animate'; // animate
+
+
+/* Utilities
+   ========================================================================== */
+@import 'utilities/local.reset'; // Reset/normalize
+
+@import 'utilities/functions'; // Functions
+@import 'utilities/mixins'; // Mixins
+
+
+/* Base
+   ========================================================================== */
+@import 'base/typography'; // Typography
+@import 'base/icons'; // ICons
+
+
+/* Components
+   ========================================================================== */
+@import 'components/buttons'; // Buttons
+@import 'components/carousel'; // Carousel
+
+
+/* Layout
+   ========================================================================== */
+@import 'layout/header'; // Header
+@import 'layout/footer'; // Footer
+@import 'layout/forms'; // Forms
+@import 'layout/pagination'; // pagination
+@import 'layout/sidebar'; // sidebar
+
+
+/* Pages
+   ========================================================================== */
+@import 'pages/dashboard'; // Home
+@import 'pages/login'; // Home
+
+

@@ -1,0 +1,33 @@
+body {
+    font-family: $font-default;
+    font-weight: normal;
+    line-height: 30px;
+    color: $text;
+    font-size: 14px;
+}
+
+p {
+    color: $text;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $primary-color;
+}
+
+.primary-color {
+    color: $primary-color;
+}
+
+.secondary-color {
+    color: $secondary-color;
+}
+
+::selection {
+    background-color: $primary-color;
+    color: $white;
+}

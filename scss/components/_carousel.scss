@@ -1,0 +1,95 @@
+.carousel .carousel-control-prev-icon {
+    /* change fill="currentColor" to %23fff to make it white  */
+    background-image: url('../images/left-nav.svg');
+    opacity: 1;
+}
+
+.carousel .carousel-control-next-icon {
+    /* change fill="currentColor" to %23fff to make it white  */
+    background-image: url('../images/right-nav.svg');
+    opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    opacity: 0;
+    width: 0;
+
+    @include respond-to(RScreen) {
+        opacity: 1;
+        width: 10%;
+    }
+
+    @include respond-to(tabLarge) {
+        opacity: 1;
+        width: 5%;
+    }
+}
+
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.key-info {
+    .carousel-cell {
+        width: 33%;
+        min-height: 350px;
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 30px;
+        @include respond-to(smartPhone){
+            width: 100%;
+            margin-right: 16px;
+        }
+        img {
+            margin: 16px auto;
+            max-width: 150px;
+        }
+
+        .content {
+            display: none;
+            padding: 0 16px;
+        }
+
+        &.is-selected {
+            background-color: $primary-light !important;
+
+            .content {
+                display: block;
+            }
+        }
+    }
+}
+
+.testimonials {
+    .carousel-cell {
+        width: 100%;
+        min-height: 350px;
+        margin-right: 16px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+    }
+}
+
+.flickity-button {
+    background: $secondary !important;
+    border: none;
+    border-radius: 6px !important;
+    color: $white !important;
+
+    &:hover,
+    &:focus {
+        background: $secondary !important;
+        color: $white !important;
+    }
+
+}

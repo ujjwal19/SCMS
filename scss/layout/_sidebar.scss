@@ -1,0 +1,155 @@
+.sidebar {
+    flex-basis: 240px;
+    border-right: 1px solid $border-color;
+    padding: 26px;
+    overflow: auto;
+    flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
+    @include transition(all 0.3s ease-in-out 0.3s);
+
+    @include respond-to(maxMedium) {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 0;
+        height: 94vh;
+        overflow: hidden;
+        width: 80vw;
+        transform: translateX(-1000px);
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            position: fixed;
+            z-index: 5;
+            background-color: #14152f;
+            transform: translateX(0px);
+        }
+    }
+
+    .accordion {
+        .accordion-item {
+            background-color: transparent;
+            border: none;
+            margin-bottom: 2px;
+        }
+
+        .accordion-button {
+            border-radius: 6px;
+            background-color: transparent;
+            padding: 10px;
+            color: $white;
+            box-shadow: none;
+            font-size: 14px;
+
+            &:not(.collapsed)::after {
+                background-image: url(../images/arrow.svg);
+            }
+
+            &:after {
+                background-image: url(../images/arrow.svg);
+            }
+
+            .fa {
+                margin-right: 8px;
+                display: flex;
+                width: 20px;
+                align-content: center;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:focus,
+            &:hover {
+                color: $white;
+                text-decoration: none;
+                background-color: $black-xst;
+            }
+        }
+
+        .accordion-body {
+            padding: 0;
+            padding-top: 10px;
+            padding-left: 25px;
+        }
+    }
+
+    .sidebar-title {
+        color: $white-xst;
+        margin-bottom: 14px;
+    }
+
+    ul.sidebar-menuitem {
+        padding-left: 0;
+        list-style: none;
+        color: $white;
+
+        li {
+            margin-bottom: 2px;
+
+            a {
+                color: $white;
+                font-size: 14px;
+                text-decoration: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-content: center;
+                justify-content: flex-start;
+                align-items: center;
+                flex: 100%;
+                padding: 4px 10px;
+                background-color: transparent;
+                position: relative;
+                border-radius: 6px;
+                @include transition(all 0.2s ease-in-out 0.2s);
+
+                .fa {
+                    margin-right: 8px;
+                    display: flex;
+                    width: 20px;
+                    align-content: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .notification-number {
+                    position: absolute;
+                    background-color: $primary-color;
+                    width: 16px;
+                    height: 16px;
+                    border-radius: 50%;
+                    font-size: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $white;
+                    right: -6px;
+                    top: -6px;
+
+                    &.updates {
+                        position: relative;
+                        top: 0;
+                        bottom: 0;
+                        margin-top: auto;
+                        margin-bottom: auto;
+                        right: 0;
+                        margin-left: auto;
+                        width: 18px;
+                        height: 18px;
+                        font-size: 11px;
+                    }
+                }
+
+                &:hover,
+                &:focus,
+                &.active {
+                    color: $white;
+                    text-decoration: none;
+                    background-color: $black-xst;
+                }
+
+            }
+        }
+    }
+}

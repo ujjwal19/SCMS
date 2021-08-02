@@ -1,0 +1,103 @@
+.btn-primary {
+    background-color: $primary;
+    padding: 8px 16px 8px 24px;
+    color: $white;
+    border-radius: 6px;
+    @include transition(ease, all 0.4s);
+    position: relative;
+    border-bottom: 0;
+    box-shadow: none;
+    border: none;
+    &:hover,
+    &:focus {
+        background-color: $secondary;
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
+
+    &.circle {
+        height: 40px;
+        width: 40px;
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        padding: 0;
+        background-image: linear-gradient(to right top, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+        @include transition(ease, all 0.4s);
+        &:hover,
+        &:focus {
+            background-image: linear-gradient(to left bottom, #cf4af3, #e73bd7, #f631bc, #fd31a2, #ff3a8b, #ff4b78, #ff5e68, #ff705c, #ff8c51, #ffaa49, #ffc848, #ffe652);
+        }
+    }
+}
+
+.btn-primary-back {
+    background-color: lighten($primary, 40%);
+    padding: 8px 16px 8px 24px;
+    color: $white;
+    border-radius: 6px;
+    @include transition(ease, all 0.4s);
+    position: relative;
+    border-bottom: 0;
+    box-shadow: none;
+    border: none;
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        height: 2px;
+        width: 18px;
+        top: 0;
+        left: -1px;
+        bottom: 0;
+        margin: auto;
+        background-color: $white;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: $primary;
+        box-shadow: none;
+        border: none;
+        outline: none;
+    }
+}
+
+
+
+.btn-learn-more {
+    color: $secondary;
+    outline: none;
+    position: relative;
+    font-size: 16px;
+    max-width: 130px;
+    font-weight: 500;
+    display: inline-block;
+    padding-right: 38px;
+    @include transition(ease, all 0.2s);
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 2px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: $secondary;
+    }
+
+    &:focus,
+    &:hover {
+        color: $primary;
+
+        &::after {
+            background-color: $primary;
+        }
+    }
+}

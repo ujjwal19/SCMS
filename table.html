@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Global CSS -->
+    <link href="css/global.css" rel="stylesheet">
+
+	
+    <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+  <link href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.min.css"  rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.0/css/boxicons.min.css" rel="stylesheet">
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.19/js/jquery.dataTables.min.js"></script>
+   <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
+ 
+  <title>Dashboard</title>
+  <script src="https://kit.fontawesome.com/9db737fb9b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section class="dashboard">
+    <div class="main-container">
+      <div class="header">
+        <div class="toggle-menu">
+          <input type="checkbox" id="mySideMenu">
+          <label for="mySideMenu">
+            <span class="bar top"></span>
+            <span class="bar middle"></span>
+            <span class="bar bottom"></span>
+          </label>
+        </div>
+        <h4 class="brand-name">Logo</h4>
+        <div class="user-info">
+          <div class="notification">
+            <a href="#"><span class="notification-number">3</span>
+              <span class="fa fa-bell"></span></a>
+          </div>
+          <div class="user-profile">
+            <img class="img-fluid"
+              src="https://images.unsplash.com/photo-1600353068440-6361ef3a86e8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80"
+              alt="">
+            <div class="dropdown">
+              <div class="info dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <span class="user-name">Mohit Mishra</span>
+                <span class="user-role">Super Admin</span>
+              </div>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><a class="dropdown-item" href="#">My Account</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="mailto:support@xyz.com">Suppport</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content-wrapper">
+        <div class="sidebar" id="sidebar">
+          <ul class="sidebar-menuitem">
+            <li><a href="#" class="active"><span class="fa fa-th"></span>Dashboard</a></li>
+          </ul>
+          <div class="accordion" id="SidebarMenuItems">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem1">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  <span class="fa fa-users"></span> Users
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem1"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">User</a></li>
+                    <li><a href="#">Student</a></li>
+                    <li><a href="#">Admision</a></li>
+                    <li><a href="#">Teacher</a></li>
+                    <li><a href="#">Teacher permission</a></li>
+                    <li><a href="#">Parent</a></li>
+                    <li><a href="#">Accountant</a></li>
+                    <li><a href="#">Librarian</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  <span class="fa fa-school"></span> Academics
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem2"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">Daily attendance</a></li>
+                    <li><a href="#">Class routine</a></li>
+                    <li><a href="#">Subject</a></li>
+                    <li><a href="#">Syllabus</a></li>
+                    <li><a href="#">Class</a></li>
+                    <li><a href="#">Class room</a></li>
+                    <li><a href="#">Department</a></li>
+                    <li><a href="#">Event calender</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  <span class="fa fa-file-alt"></span> Examination
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem3"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">Marks</a></li>
+                    <li><a href="#">Examen</a></li>
+                    <li><a href="#">Grades</a></li>
+                    <li><a href="#">Promotion</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  <span class="fa fa-briefcase"></span> Accounting
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem4"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">Student fee manager</a></li>
+                    <li><a href="#">Expense category</a></li>
+                    <li><a href="#">Expense manager</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  <span class="fa fa-dna"></span> Back office
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem5"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Session</a></li>
+                    <li><a href="#">Addon manager</a></li>
+                    <li><a href="#">Noticeboard</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="SidebarMenuItem6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                  <span class="fa fa-cog"></span> Settings
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="SidebarMenuItem6"
+                data-bs-parent="#SidebarMenuItems">
+                <div class="accordion-body">
+                  <ul class="sidebar-menuitem">
+                    <li><a href="#">System settings</a></li>
+                    <li><a href="#">Website settings</a></li>
+                    <li><a href="#">School settings</a></li>
+                    <li><a href="#">Payment settings</a></li>
+                    <li><a href="#">Language settings</a></li>
+                    <li><a href="#">Smtp settings</a></li>
+                    <li><a href="#">About</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Content Wrapper -->
+        <div class="rightside-wrapper">
+          <div class="content-wrapper-header">
+            <h5>Table</h5>
+          </div>
+		  <!-- Ujjwal-->
+		  <div class="container">
+  <div class="row py-5">
+    <div class="col-12">
+      <table id="example" class="table table-hover responsive nowrap" style="width:100%">
+        <thead>
+          <tr>
+            <th>Client Name</th>
+            <th>Phone Number</th>
+            <th>Profession</th>
+            <th>Date of Birth</th>
+            <th>App Access</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#">
+                <div class="d-flex align-items-center">
+                  <div class="avatar avatar-blue mr-3">EB</div>
+
+                  <div class="">
+                    <p class="font-weight-bold mb-0">Ethan Black</p>
+                    <p class="text-muted mb-0">ethan-black@example.com</p>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td>(784) 667 8768</td>
+            <td>Designer</td>
+            <td>09/04/1996</td>
+            <td>
+              <div class="badge badge-success badge-success-alt">Enabled</div>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bx bx-dots-horizontal-rounded" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Actions"></i>
+                    </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                  <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i> Edit Profile</a>
+                  <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Remove</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <a href="#">
+                <div class="d-flex align-items-center">
+                  <div class="avatar avatar-pink mr-3">JR</div>
+
+                  <div class="">
+                    <p class="font-weight-bold mb-0">Julie Richards</p>
+                    <p class="text-muted mb-0">julie_89@example.com</p>
+                  </div>
+                </div>
+              </a>
+            </td>
+            <td> (937) 874 6878</td>
+            <td>Investment Banker</td>
+            <td>13/01/1989</td>
+            <td>
+              <div class="badge badge-success badge-success-alt">Enabled</div>
+            </td>
+            <td>
+              <div class="dropdown">
+                <button class="btn btn-sm btn-icon" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="bx bx-dots-horizontal-rounded" data-bs-toggle="tooltip" data-bs-placement="top"
+                        title="Actions"></i>
+                    </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                  <a class="dropdown-item" href="#"><i class="bx bxs-pencil mr-2"></i> Edit Profile</a>
+                  <a class="dropdown-item text-danger" href="#"><i class="bx bxs-trash mr-2"></i> Remove</a>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+		  <!--Ujjwal End-->
+       </div>
+      </div>
+    </div>
+  </section>
+  <script>
+  $(document).ready(function() {
+  $("#example").DataTable({
+    aaSorting: [],
+    responsive: true,
+
+    columnDefs: [
+      {
+        responsivePriority: 1,
+        targets: 0
+      },
+      {
+        responsivePriority: 2,
+        targets: -1
+      }
+    ]
+  });
+
+  $(".dataTables_filter input")
+    .attr("placeholder", "Search here...")
+    .css({
+      width: "300px",
+      display: "inline-block"
+    });
+
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+    $('#mySideMenu').change(function(){
+     if($(this).is(":checked")) {
+        $('#sidebar').addClass("active");
+        $('.rightside-wrapper').addClass("active");
+    } else {
+        $('#sidebar').removeClass("active");
+        $('.rightside-wrapper').removeClass("active");
+    }
+});
+  </script>
+</body>
+
+</html>
